@@ -1,2 +1,4 @@
 build/
-*.img
+.*.img
+.*.uimg
+.*.bin

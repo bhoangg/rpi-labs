@@ -1,4 +1,5 @@
 ARMGNU?=aarch64-linux-gnu
+MKIMAGE?=~/workspace/linux/raspberrypi-linux/u-boot/tools/mkimage
 COPS = -Wall -nostdlib -nostartfiles -ffreestanding -Iinclude -Istartup/include -mgeneral-regs-only
 ASMOPS = -Iinclude -Istartup/include
 
@@ -9,7 +10,7 @@ STARTUP_DIR = startup
 all : kernel8.img
 
 clean :
-	rm -rf $(BUILD_DIR) *.img 
+	rm -rf $(BUILD_DIR)
 
 $(BUILD_DIR)/%_c.o: %.c
 	@mkdir -p $(@D)
@@ -35,4 +36,6 @@ DEP_FILES = $(OBJ_FILES:%.o=%.d)
 
 kernel8.img: $(STARTUP_DIR)/linker.ld $(OBJ_FILES)
 	$(ARMGNU)-ld -T $(STARTUP_DIR)/linker.ld -o $(BUILD_DIR)/kernel8.elf  $(OBJ_FILES)
-	$(ARMGNU)-objcopy $(BUILD_DIR)/kernel8.elf -O binary kernel8.img
+	$(ARMGNU)-objcopy $(BUILD_DIR)/kernel8.elf -O binary $(BUILD_DIR)/kernel8.img
+	$(MKIMAGE) -A arm64 -C none -O linux -T kernel -d $(BUILD_DIR)/kernel8.img -a 0x00100000 -e 0x00100000 $(BUILD_DIR)/kernel8.uimg
+	@cp startup/u-boot.bin startup/config.txt $(BUILD_DIR)/
