@@ -1,0 +1,17 @@
+cc_binary {
+    relative_install_path: "hw",
+    defaults: ["hidl_defaults"],
+    name: "test_simple",
+    proprietary: true,
+    srcs: ["test.cpp"],
+
+    shared_libs: [
+        "liblog",
+        "libhardware",
+        "libhidlbase",
+        "libhidltransport",
+        "libutils",
+        "android.hardware.simple@2.0",
+    ],
+
+}

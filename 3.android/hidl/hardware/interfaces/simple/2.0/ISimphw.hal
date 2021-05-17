@@ -1,0 +1,5 @@
+package android.hardware.simple@2.0;
+ 
+interface ISimphw {
+	helloWorld(string name) generates (string result);
+};

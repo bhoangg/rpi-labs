@@ -1,0 +1,5 @@
+package android.hardware.hello@1.0;
+
+interface IHello {
+	helloWorld(string name) generates (string result);
+};
