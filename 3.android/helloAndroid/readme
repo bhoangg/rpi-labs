@@ -1,0 +1,21 @@
+# Hello Android
+
+## Object
+Learn how to use Activity, BroadcastReceiver, Service, AIDL, JNI, Intent
+
+## Requirement
+
+Package A :
+-	Activity
+-	BroadCastReceiver
+
+Package B :
+-	Service (AIDL)
+-	Print module
+
+1.	Package A : BroadCast Receiver
+2.	Package A : Hellow Activity Display (3 buttons, #Java, #Java to Native, #Java to Native to Java)
+3.	Package A : Button Click -> PrintHellow from Package B
+4.	Package B : PrintHellow in JAVA
+5.	Package B : PrintHellow in JNI (Java -> Native)
+6.	Package B : PrintHellow in JNI (Java -> Native -> JAVA)

@@ -1,0 +1,2 @@
+include ':logService', ':logClient'
+rootProject.name='helloAndroid'
