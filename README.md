@@ -1,2 +1,4 @@
 # labs
-It is not just a lab, it is the simplest experiment to understand
+It is a group of several experimentation to understand Arm architecture, linux device driver and android framework
+
+Note: this project is in progressing. The documentation is not update to date
