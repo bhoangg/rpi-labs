@@ -1,3 +1,9 @@
+#Rpi Baremental
+
+1. gpio
+2. interrupt <- in progress
+3. virtual memory <- todo
+
 #Useful ARM instructions:
 
 mrs: Load value from a system register to one of the general purpose registers (x0–x30)
