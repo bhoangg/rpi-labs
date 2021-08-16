@@ -1,5 +1,5 @@
-ARMGNU?=aarch64-linux-gnu
-MKIMAGE?=~/workspace/linux/raspberrypi-linux/u-boot/tools/mkimage
+ARMGNU?=~/tools/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu
+MKIMAGE?=~/workspace/rpi/u-boot/tools/mkimage
 COPS = -Wall -nostdlib -nostartfiles -ffreestanding -Iinclude -Istartup/include -mgeneral-regs-only
 ASMOPS = -Iinclude -Istartup/include
 

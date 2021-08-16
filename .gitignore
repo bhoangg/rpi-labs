@@ -2,3 +2,13 @@ build/
 .*.img
 .*.uimg
 .*.bin
+
+#kenerl modules
+*.ko
+*.cmd
+*.mod
+*.mod.c
+*.o
+*.swp
+*.symvers
+*.order

@@ -1,2 +1,6 @@
-kernel_old=1
+enable_uart=1
+kernel=u-boot.bin
+#kernel=kernel8.img
+arm_64bit=1
+core_freq=250
 disable_commandline_tags=1
